@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 align='center'>Advanced Settings</h1>
+    <br>
+    <form method="POST" id="target">
+        <div class="form-group">
+            Rack <input type="text" class="form-control" name="rack" value="{{ data.rack }}" placeholder="Rack" readonly>
+        </div>
+        <div class="form-group">
+            Material Type <input type="text" class="form-control" name="matl" value="{{ data.matl }}" placeholder="Material Type">
+        </div>
+        <div class="form-group">
+            Sheet Size <input type="text" class="form-control" name="size" value="{{ data.size }}" placeholder="Sheet Size">
+        </div>
+        <div class="form-group">
+            <input type="hidden" type="text" class="form-control" name="note" value="{{ data.note }}" placeholder="Notes">
+        </div>
+        <div class="form-group">
+            Weight (lb/ft<sup>2</sup>) <input type="text" class="form-control" name="weight" value="{{ data.weight }}" placeholder="Weight">
+        </div>
+        <div class="form-group">
+            Sheet Size (ft<sup>2</sup>) <input type="text" class="form-control" name="row" value="{{ data.row }}" placeholder="Sheet Size">
+        </div>
+        <div class="form-group">
+            Phidget <input type="text" class="form-control" name="phidget" value="{{ data.phidget }}" placeholder="Phidget">
+        </div>
+
+        <button type="submit" class="btn btn-block btn-primary">Update</button>
+    </form>
+{% endblock %}

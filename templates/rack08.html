@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <body>
+        <div>
+            <div class="row">
+                <h3 align="center">Rack 08</h3>
+                <br>
+                <table id="ztable" align="center">
+                    <thead>
+                    <tr>
+                        <th width="10%">Row</th>
+                        <th width="25%">Material Type</th>
+                        <th width="15%">Sheet Size</th>
+                        <th width="10%">No. of Sheets</th>
+                        <th width="40%">Notes</th>
+                    </tr>
+                    </thead>
+                    <tbody id="rows">
+                        <tr><td><a href="/edit/{{ rack[93][0] }}"><span style="font-weight:bold">{{ rack[93][1] }}</span></a></td><td> {{ rack[93][3] }}</td><td>{{ rack[93][4] }}</td><td>{{rack[93][2] }}</td><td> {{ rack[93][5] }} </td></tr>
+                        <tr><td><a href="/edit/{{ rack[92][0] }}"><span style="font-weight:bold">{{ rack[92][1] }}</span></a></td><td> {{ rack[92][3] }}</td><td>{{ rack[92][4] }}</td><td>{{rack[92][2] }}</td><td> {{ rack[92][5] }} </td></tr>
+                        <tr><td><a href="/edit/{{ rack[91][0] }}"><span style="font-weight:bold">{{ rack[91][1] }}</span></a></td><td> {{ rack[91][3] }}</td><td>{{ rack[91][4] }}</td><td>{{rack[91][2] }}</td><td> {{ rack[91][5] }} </td></tr>
+                        <tr><td><a href="/edit/{{ rack[90][0] }}"><span style="font-weight:bold">{{ rack[90][1] }}</span></a></td><td> {{ rack[90][3] }}</td><td>{{ rack[90][4] }}</td><td>{{rack[90][2] }}</td><td> {{ rack[90][5] }} </td></tr>
+                        <tr><td><a href="/edit/{{ rack[89][0] }}"><span style="font-weight:bold">{{ rack[89][1] }}</span></a></td><td> {{ rack[89][3] }}</td><td>{{ rack[89][4] }}</td><td>{{rack[89][2] }}</td><td> {{ rack[89][5] }} </td></tr>
+                        <tr><td><a href="/edit/{{ rack[88][0] }}"><span style="font-weight:bold">{{ rack[88][1] }}</span></a></td><td> {{ rack[88][3] }}</td><td>{{ rack[88][4] }}</td><td>{{rack[88][2] }}</td><td> {{ rack[88][5] }} </td></tr>
+                        <tr><td><a href="/edit/{{ rack[87][0] }}"><span style="font-weight:bold">{{ rack[87][1] }}</span></a></td><td> {{ rack[87][3] }}</td><td>{{ rack[87][4] }}</td><td>{{rack[87][2] }}</td><td> {{ rack[87][5] }} </td></tr>
+                        <tr><td><a href="/edit/{{ rack[86][0] }}"><span style="font-weight:bold">{{ rack[86][1] }}</span></a></td><td> {{ rack[86][3] }}</td><td>{{ rack[86][4] }}</td><td>{{rack[86][2] }}</td><td> {{ rack[86][5] }} </td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,118 @@
+.ztable, th, td {
+    text-align: center;
+}
+
+body,html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+div {
+    width: 100%;
+    height: 100%;
+}
+
+.chat-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+.chat-message {
+    padding: 6px;
+    border-radius: 3px;
+    margin-bottom: 3px;
+}
+
+.bot-message {
+    background: green;
+    color: white;
+}
+
+.human-message {
+    background:dodgerblue;
+    color: white;
+    margin: 13px 1px;
+}
+
+.input {
+    width: 100%;
+    margin: 5px 0px;
+    height: 60px;
+    border: 1px solid rosybrown;
+    border-radius: 3px;
+}
+
+ul {
+    /* padding-left: 1.4em; } */
+    position: fixed;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333; 
+}
+
+li {
+    /* margin-bottom: 0.4em; } */
+    float: left; 
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; 
+}
+
+li a:hover:not(.active) {
+    background-color: #111; 
+}
+
+.active {
+    background-color: #ff3b3f; 
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+#myInput {
+    background-image: url('https://www.w3schools.com/css/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+th {
+    text-align: center;
+}
+
+.disabled {
+    pointer-events: none;
+    background: #ffffff;
+}
+
+if(document.getElementById("test").checked) {
+    document.getElementById("testhidden").disabled = true;
+}
