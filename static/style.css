@@ -1,118 +1,376 @@
-.ztable, th, td {
+* {
+    font-family: 'Poppins', sans-serif;
+    /* font-size: 1.1em; */
+    /* font-weight: 300; */
+    /* line-height: 1.7em; */
+}
+
+/* html, body { */                 
+/*     overflow-x:hidden; */
+/* } */
+
+#ztable {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+#ztable td, #ztable th {
+    border: 2px solid #ddd;
+    padding: 8px;
+}
+
+#ztable tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#ztable tr:hover {
+    background-color: #ddd;
+}
+
+#ztable th {
+    text-align: center;
+    background-color: #4CAF50
+}
+
+#ztable td {
     text-align: center;
 }
 
-body,html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-body {
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-}
-
-div {
-    width: 100%;
-    height: 100%;
-}
-
-.chat-container {
-    margin: 0px;
-    padding: 0px;
-}
-
-.chat-message {
-    padding: 6px;
-    border-radius: 3px;
-    margin-bottom: 3px;
-}
-
-.bot-message {
-    background: green;
-    color: white;
-}
-
-.human-message {
-    background:dodgerblue;
-    color: white;
-    margin: 13px 1px;
-}
-
-.input {
-    width: 100%;
-    margin: 5px 0px;
-    height: 60px;
-    border: 1px solid rosybrown;
-    border-radius: 3px;
-}
-
-ul {
-    /* padding-left: 1.4em; } */
+#ztable ul {
     position: fixed;
     width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333; 
+    background-color: #333;
 }
 
-li {
-    /* margin-bottom: 0.4em; } */
-    float: left; 
+#ztable li {
+    float: left;    
 }
 
-li a {
+#ztable li a {              
     display: block;
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
-li a:hover:not(.active) {
-    background-color: #111; 
+#ztable li a:hover:not(.active) {
+    background-color: #111;
 }
 
 .active {
-    background-color: #ff3b3f; 
+    background-color: #ff3b3f;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+
+
+/* ---------------------------------------------------
+    NAVBAR/PAGE STYLE
+----------------------------------------------------- */
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
 }
 
-tbody tr:hover {
-    background-color: #ddd;
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
 }
 
-tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
 }
 
-#myInput {
-    background-image: url('https://www.w3schools.com/css/searchicon.png');
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
     width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
 }
 
-th {
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #D22B2B;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #B82626;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    /* color: #7386D5; */
+    color: #000000;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #D22B2B;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background-color: #D1BBA8;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
     text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
 }
 
-.disabled {
+a.download {
+    background: #B82626;
+    color: #fff;
+    border-style: solid;
+    border-color: #000000;
+    border-width: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+#navdrop {
+    background-color: #D1BBA8;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#sidebarCollapse {
+    background: #B82626;
+    color: #fff;
+}
+
+.navcent {
+    font-size: 1.1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a.disabledLink {
     pointer-events: none;
-    background: #ffffff;
+    cursor: default;
 }
 
-if(document.getElementById("test").checked) {
-    document.getElementById("testhidden").disabled = true;
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
 }
+
+
+
+
+
+
+/* .ztable, th, td { */
+/*     text-align: center; */
+/* } */
+
+/* body,html { */
+/*     margin: 0; */
+/*     padding: 0; */
+/*     height: 100%; */
+/* } */
+
+/* body { */
+/*     margin: 0px; */
+/*     padding: 0px; */
+/*     width: 100%; */
+/* } */
+
+/* div { */
+/*     width: 100%; */
+/*     height: 100%; */
+/* } */
+
+/* .chat-container { */
+/*     margin: 0px; */
+/*     padding: 0px; */
+/* } */
+
+/* .chat-message { */
+/*     padding: 6px; */
+/*     border-radius: 3px; */
+/*     margin-bottom: 3px; */
+/* } */
+
+/* .bot-message { */
+/*     background: green; */
+/*     color: white; */
+/* } */
+
+/* .human-message { */
+/*     background:dodgerblue; */
+/*     color: white; */
+/*     margin: 13px 1px; */
+/* } */
+
+/* .input { */
+/*     width: 100%; */
+/*     margin: 5px 0px; */
+/*     height: 60px; */
+/*     border: 1px solid rosybrown; */
+/*     border-radius: 3px; */
+/* } */
+
+/* ul { */
+/*     /1* padding-left: 1.4em; } *1/ */
+/*     position: fixed; */
+/*     width: 100%; */
+/*     list-style-type: none; */
+/*     margin: 0; */
+/*     padding: 0; */
+/*     overflow: hidden; */
+/*     background-color: #333; */ 
+/* } */
+
+/* li { */
+/*     /1* margin-bottom: 0.4em; } *1/ */
+/*     float: left; */ 
+/* } */
+
+/* li a { */
+/*     display: block; */
+/*     color: white; */
+/*     text-align: center; */
+/*     padding: 14px 16px; */
+/*     text-decoration: none; */ 
+/* } */
+
+/* li a:hover:not(.active) { */
+/*     background-color: #111; */ 
+/* } */
+
+/* .active { */
+/*     background-color: #ff3b3f; */ 
+/* } */
+
+/* tbody tr:nth-child(even) { */
+/*     background-color: #f2f2f2; */
+/* } */
+
+/* tbody tr:hover { */
+/*     background-color: #ddd; */
+/* } */
+
+/* tbody tr:nth-child(odd) { */
+/*     background-color: #f2f2f2; */
+/* } */
+
+/* #myInput { */
+/*     background-image: url('https://www.w3schools.com/css/searchicon.png'); */
+/*     background-position: 10px 12px; */
+/*     background-repeat: no-repeat; */
+/*     width: 100%; */
+/*     font-size: 16px; */
+/*     padding: 12px 20px 12px 40px; */
+/*     border: 1px solid #ddd; */
+/*     margin-bottom: 12px; */
+/* } */
+
+/* th { */
+/*     text-align: center; */
+/* } */
+
+/* .disabled { */
+/*     pointer-events: none; */
+/*     background: #ffffff; */
+/* } */
+
+/* if(document.getElementById("test").checked) { */
+/*     document.getElementById("testhidden").disabled = true; */
+/* } */
