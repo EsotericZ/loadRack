@@ -1,12 +1,79 @@
 {% include 'navbase.html' %}
-    <!-- Page Content --!>
+    <!-- PAGE CONTENT  -->
     <div id="content">
-    
-        <!-- PAGE CONTENT --!>
-        <div class="container h-100">
-            <div class="h-100 justify-content-center">
+        <nav class="navbar navbar-expand-lg navbar-light" id="navdrop">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn">
+                    <i class="fas fa-align-left"></i>
+                    <span>Toggle Navbar</span>
+                </button>
+                <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">                        
+                    <i class="fas fa-align-justify"></i>
+                </button>
+
+                <!-- PAGE LINKS -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav navcent">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('index') }}">Rack Home</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack01') }}">01</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack02') }}">02</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack03') }}">03</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack04') }}">04</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack05') }}">05</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack06') }}">06</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack07') }}">07</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack08') }}">08</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack09') }}">09</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack10') }}">10</a>
+                        </li>
+                        <li class="nav item nav-link">|</li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('rack11') }}">11</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- PAGE LINKS -->
+
+            </div>
+        </nav>
+
+        <!-- PAGE CONTENT -->
+        <div>
+            <div class="justify-content-center">
                 {% block content %}  {% endblock %}
             </div>
         </div>
-        <!-- PAGE CONTENT --!>
+        <!-- PAGE CONTENT -->
+
     </div>

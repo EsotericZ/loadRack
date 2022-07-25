@@ -9,6 +9,70 @@
 /*     overflow-x:hidden; */
 /* } */
 
+
+/* ---------------------------------------------------
+    TABLE STYLE
+----------------------------------------------------- */
+
+#myInput {
+    background-image: url('https://www.w3schools.com/css/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+ 
+#myTable {
+    border-collapse: collapse;
+    /* table-layout: fixed; */
+    width: 100%;
+    font-size: 16px;
+}
+
+#myTable th, #myTable td { 
+    text-align: center; 
+    padding: 12px; 
+} 
+
+#myTable th { 
+    background: #ffffff; 
+    border-top: 1px solid #ddd; 
+    border-bottom: 2px solid #ddd; 
+} 
+
+#myTable tr { 
+    border-bottom: 1px solid #ddd; 
+} 
+
+#myTable tr:nth-child(even) { 
+    background-color: #f2f2f2; 
+}
+
+#myTable tr.header, #myTable tr:hover { 
+    background-color: #ddd; 
+} 
+
+th { 
+    text-align: center; 
+} 
+
+.disabled { 
+    pointer-events: none; 
+    background: #ffffff; 
+} 
+
+
+if(document.getElementById("test").checked) { 
+    document.getElementById("testhidden").disabled = true; 
+} 
+
+/* ---------------------------------------------------
+    TABLE STYLE (OLD)
+----------------------------------------------------- */
+
 #ztable {
     font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
     width: 100%;

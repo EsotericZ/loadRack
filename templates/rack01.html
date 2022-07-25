@@ -1,87 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
-        <script src="static/js/application.js"></script>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <style>
-            html, body {
-                overflow-x:hidden;
-            }
-            #ztable {
-                font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-                width: 80%;
-            }
-            #ztable td, #ztable th {
-                border: 2px solid #ddd;
-                padding: 8px;
-            }
-            #ztable tr:nth-child(even){background-color: #f2f2f2;}
-            #ztable tr:hover {background-color: #ddd;}
-            #ztable th {
-                text-align: center;
-                background-color: #4CAF50
-            }
-            #ztable td {
-                text-align: center;
-            }
-            ul {
-                position: fixed;
-                width: 100%;
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                background-color: #333;
-                overflow-x:hidden;
-            }
-            li {
-                float: left; 
-            }
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 14px 16px;
-                text-decoration: none; 
-            }
-            li a:hover:not(.active) {
-                background-color: #111; 
-            }
-            .active {
-                background-color: #ff3b3f; 
-            }
-        </style>
-    </head>
+{% extends 'base.html' %}
+
+{% block content %}
     <body>
-        <ul>
-            <li><a class="active"><b><font color="white">Material Rack</b></font></a></li>
-            <li style="float:left; margin-left: 30px; list-style-type: square;"><a href="{{ url_for('index') }}">Monarch Home</a></li>
-            <li style="float:right; margin-right: 30px; list-style-type: square;"><a href="{{ url_for('rack02') }}">Rack 02</a></li>
-            <li style="float:right; margin-right: 30px; list-style-type: square;"><a href="{{ url_for('rack01') }}">Rack 01</a></li>
-            <li style="float:right; margin-right: 30px; list-style-type: square;"><a href="{{ url_for('index') }}">Rack Home</a></li>
-        </ul>
         <div>
             <div class="row">
-                <br>
-                <br>
-                <br>
                 <h3 align="center">Rack 01</h3>
                 <br>
                 <table id="ztable" align="center">
                     <thead>
                     <tr>
                         <th width="10%">Row</th>
-                        <th width="25%">Material Type</th>
+                        <th width="15%">Material Type</th>
                         <th width="15%">Sheet Size</th>
                         <th width="10%">No. of Sheets</th>
-                        <th width="40%">Notes</th>
+                        <th width="50%">Notes</th>
                     </tr>
                     </thead>
-                    <tbody>
-                        <!-- <tr><td>18</td><td colspan="5">Not In Use</td></tr> -->
-                        
+                    <tbody id="rows">
                         <tr><td><a href="/edit/{{ rack[17][0] }}"><span style="font-weight:bold">{{ rack[17][1] }}</span></a></td><td> {{ rack[17][3] }}</td><td>{{ rack[17][4] }}</td><td>{{rack[17][2] }}</td><td> {{ rack[17][5] }} </td></tr>
                         <tr><td><a href="/edit/{{ rack[16][0] }}"><span style="font-weight:bold">{{ rack[16][1] }}</span></a></td><td> {{ rack[16][3] }}</td><td>{{ rack[16][4] }}</td><td>{{rack[16][2] }}</td><td> {{ rack[16][5] }} </td></tr>
                         <tr><td><a href="/edit/{{ rack[15][0] }}"><span style="font-weight:bold">{{ rack[15][1] }}</span></a></td><td> {{ rack[15][3] }}</td><td>{{ rack[15][4] }}</td><td>{{rack[15][2] }}</td><td> {{ rack[15][5] }} </td></tr>
@@ -124,4 +59,4 @@
             </div>
         </div>
     </body>
-</html>
+{% endblock %}

@@ -6,7 +6,6 @@ const pusher = new Pusher("6fd0f7485811f36fa809", {
 var channel = pusher.subscribe('table');
 
 channel.bind('new-record', (data) => {
-
     $('#rows').append('
         <tr id="${data.data.id}">
             <th scope="row"> ${data.data.rack} </th>
@@ -31,3 +30,10 @@ channel.bind('upgrade-record', (data) => {
         <td> ${data.data.phidget} </td>
     ')
 });
+
+// TOGGLE NAVBAR
+$(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
