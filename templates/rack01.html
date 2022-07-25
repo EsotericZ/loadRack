@@ -1,40 +1,35 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    <h1 align="center">Rack 01</h1>
+    <br>
     <body>
-        <div>
-            <div class="row">
-                <h3 align="center">Rack 01</h3>
-                <br>
-                <table id="ztable" align="center">
-                    <thead>
-                    <tr>
-                        <th width="10%">Row</th>
-                        <th width="15%">Material Type</th>
-                        <th width="15%">Sheet Size</th>
-                        <th width="10%">No. of Sheets</th>
-                        <th width="50%">Notes</th>
-                    </tr>
-                    </thead>
-                    <tbody id="rows">
-                        <tr><td><a href="/edit/{{ rack[17][0] }}"><span style="font-weight:bold">{{ rack[17][1] }}</span></a></td><td> {{ rack[17][3] }}</td><td>{{ rack[17][4] }}</td><td>{{rack[17][2] }}</td><td> {{ rack[17][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[16][0] }}"><span style="font-weight:bold">{{ rack[16][1] }}</span></a></td><td> {{ rack[16][3] }}</td><td>{{ rack[16][4] }}</td><td>{{rack[16][2] }}</td><td> {{ rack[16][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[15][0] }}"><span style="font-weight:bold">{{ rack[15][1] }}</span></a></td><td> {{ rack[15][3] }}</td><td>{{ rack[15][4] }}</td><td>{{rack[15][2] }}</td><td> {{ rack[15][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[14][0] }}"><span style="font-weight:bold">{{ rack[14][1] }}</span></a></td><td> {{ rack[14][3] }}</td><td>{{ rack[14][4] }}</td><td>{{rack[14][2] }}</td><td> {{ rack[14][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[13][0] }}"><span style="font-weight:bold">{{ rack[13][1] }}</span></a></td><td> {{ rack[13][3] }}</td><td>{{ rack[13][4] }}</td><td>{{rack[13][2] }}</td><td> {{ rack[13][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[12][0] }}"><span style="font-weight:bold">{{ rack[12][1] }}</span></a></td><td> {{ rack[12][3] }}</td><td>{{ rack[12][4] }}</td><td>{{rack[12][2] }}</td><td> {{ rack[12][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[11][0] }}"><span style="font-weight:bold">{{ rack[11][1] }}</span></a></td><td> {{ rack[11][3] }}</td><td>{{ rack[11][4] }}</td><td>{{rack[11][2] }}</td><td> {{ rack[11][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[10][0] }}"><span style="font-weight:bold">{{ rack[10][1] }}</span></a></td><td> {{ rack[10][3] }}</td><td>{{ rack[10][4] }}</td><td>{{rack[10][2] }}</td><td> {{ rack[10][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[9][0] }}"><span style="font-weight:bold">{{ rack[9][1] }}</span></a></td><td> {{ rack[9][3] }}</td><td>{{ rack[9][4] }}</td><td>{{rack[9][2] }}</td><td> {{ rack[9][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[8][0] }}"><span style="font-weight:bold">{{ rack[8][1] }}</span></a></td><td> {{ rack[8][3] }}</td><td>{{ rack[8][4] }}</td><td>{{rack[8][2] }}</td><td> {{ rack[8][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[7][0] }}"><span style="font-weight:bold">{{ rack[7][1] }}</span></a></td><td> {{ rack[7][3] }}</td><td>{{ rack[7][4] }}</td><td>{{rack[7][2] }}</td><td> {{ rack[7][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[6][0] }}"><span style="font-weight:bold">{{ rack[6][1] }}</span></a></td><td> {{ rack[6][3] }}</td><td>{{ rack[6][4] }}</td><td>{{rack[6][2] }}</td><td> {{ rack[6][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[5][0] }}"><span style="font-weight:bold">{{ rack[5][1] }}</span></a></td><td> {{ rack[5][3] }}</td><td>{{ rack[5][4] }}</td><td>{{rack[5][2] }}</td><td> {{ rack[5][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[4][0] }}"><span style="font-weight:bold">{{ rack[4][1] }}</span></a></td><td> {{ rack[4][3] }}</td><td>{{ rack[4][4] }}</td><td>{{rack[4][2] }}</td><td> {{ rack[4][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[3][0] }}"><span style="font-weight:bold">{{ rack[3][1] }}</span></a></td><td> {{ rack[3][3] }}</td><td>{{ rack[3][4] }}</td><td>{{rack[3][2] }}</td><td> {{ rack[3][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[2][0] }}"><span style="font-weight:bold">{{ rack[2][1] }}</span></a></td><td> {{ rack[2][3] }}</td><td>{{ rack[2][4] }}</td><td>{{rack[2][2] }}</td><td> {{ rack[2][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[1][0] }}"><span style="font-weight:bold">{{ rack[1][1] }}</span></a></td><td> {{ rack[1][3] }}</td><td>{{ rack[1][4] }}</td><td>{{rack[1][2] }}</td><td> {{ rack[1][5] }} </td></tr>
-                        <tr><td><a href="/edit/{{ rack[0][0] }}"><span style="font-weight:bold">{{ rack[0][1] }}</span></a></td><td> {{ rack[0][3] }}</td><td>{{ rack[0][4] }}</td><td>{{rack[0][2] }}</td><td> {{ rack[0][5] }} </td></tr>
+        <table id="myTable">
+            <tr class="header">
+                <th width="10%">Row</th>
+                <th width="15%">Material Type</th>
+                <th width="15%">Sheet Size</th>
+                <th width="10%">No. of Sheets</th>
+                <th width="50%">Notes</th>
+            </tr>
+            <tr><td><a href="/edit/{{ rack[17][0] }}"><span style="font-weight:bold">{{ rack[17][1] }}</span></a></td><td> {{ rack[17][3] }}</td><td>{{ rack[17][4] }}</td><td>{{rack[17][2] }}</td><td> {{ rack[17][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[16][0] }}"><span style="font-weight:bold">{{ rack[16][1] }}</span></a></td><td> {{ rack[16][3] }}</td><td>{{ rack[16][4] }}</td><td>{{rack[16][2] }}</td><td> {{ rack[16][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[15][0] }}"><span style="font-weight:bold">{{ rack[15][1] }}</span></a></td><td> {{ rack[15][3] }}</td><td>{{ rack[15][4] }}</td><td>{{rack[15][2] }}</td><td> {{ rack[15][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[14][0] }}"><span style="font-weight:bold">{{ rack[14][1] }}</span></a></td><td> {{ rack[14][3] }}</td><td>{{ rack[14][4] }}</td><td>{{rack[14][2] }}</td><td> {{ rack[14][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[13][0] }}"><span style="font-weight:bold">{{ rack[13][1] }}</span></a></td><td> {{ rack[13][3] }}</td><td>{{ rack[13][4] }}</td><td>{{rack[13][2] }}</td><td> {{ rack[13][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[12][0] }}"><span style="font-weight:bold">{{ rack[12][1] }}</span></a></td><td> {{ rack[12][3] }}</td><td>{{ rack[12][4] }}</td><td>{{rack[12][2] }}</td><td> {{ rack[12][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[11][0] }}"><span style="font-weight:bold">{{ rack[11][1] }}</span></a></td><td> {{ rack[11][3] }}</td><td>{{ rack[11][4] }}</td><td>{{rack[11][2] }}</td><td> {{ rack[11][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[10][0] }}"><span style="font-weight:bold">{{ rack[10][1] }}</span></a></td><td> {{ rack[10][3] }}</td><td>{{ rack[10][4] }}</td><td>{{rack[10][2] }}</td><td> {{ rack[10][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[9][0] }}"><span style="font-weight:bold">{{ rack[9][1] }}</span></a></td><td> {{ rack[9][3] }}</td><td>{{ rack[9][4] }}</td><td>{{rack[9][2] }}</td><td> {{ rack[9][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[8][0] }}"><span style="font-weight:bold">{{ rack[8][1] }}</span></a></td><td> {{ rack[8][3] }}</td><td>{{ rack[8][4] }}</td><td>{{rack[8][2] }}</td><td> {{ rack[8][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[7][0] }}"><span style="font-weight:bold">{{ rack[7][1] }}</span></a></td><td> {{ rack[7][3] }}</td><td>{{ rack[7][4] }}</td><td>{{rack[7][2] }}</td><td> {{ rack[7][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[6][0] }}"><span style="font-weight:bold">{{ rack[6][1] }}</span></a></td><td> {{ rack[6][3] }}</td><td>{{ rack[6][4] }}</td><td>{{rack[6][2] }}</td><td> {{ rack[6][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[5][0] }}"><span style="font-weight:bold">{{ rack[5][1] }}</span></a></td><td> {{ rack[5][3] }}</td><td>{{ rack[5][4] }}</td><td>{{rack[5][2] }}</td><td> {{ rack[5][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[4][0] }}"><span style="font-weight:bold">{{ rack[4][1] }}</span></a></td><td> {{ rack[4][3] }}</td><td>{{ rack[4][4] }}</td><td>{{rack[4][2] }}</td><td> {{ rack[4][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[3][0] }}"><span style="font-weight:bold">{{ rack[3][1] }}</span></a></td><td> {{ rack[3][3] }}</td><td>{{ rack[3][4] }}</td><td>{{rack[3][2] }}</td><td> {{ rack[3][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[2][0] }}"><span style="font-weight:bold">{{ rack[2][1] }}</span></a></td><td> {{ rack[2][3] }}</td><td>{{ rack[2][4] }}</td><td>{{rack[2][2] }}</td><td> {{ rack[2][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[1][0] }}"><span style="font-weight:bold">{{ rack[1][1] }}</span></a></td><td> {{ rack[1][3] }}</td><td>{{ rack[1][4] }}</td><td>{{rack[1][2] }}</td><td> {{ rack[1][5] }} </td></tr>
+            <tr><td><a href="/edit/{{ rack[0][0] }}"><span style="font-weight:bold">{{ rack[0][1] }}</span></a></td><td> {{ rack[0][3] }}</td><td>{{ rack[0][4] }}</td><td>{{rack[0][2] }}</td><td> {{ rack[0][5] }} </td></tr>
                         <!-- <tr><td><a href="/edit/{{ rack[17][0] }}"><span style="font-weight:bold">{{ rack[17][1] }}</span></a></td><td> {{ rack[17][3] }}</td><td>{{ rack[17][4] }}</td><td><div id="log18"></div></td><td> {{ rack[17][5] }} </td></tr> -->
                         <!-- <tr><td><a href="/edit/{{ rack[16][0] }}"><span style="font-weight:bold">{{ rack[16][1] }}</span></a></td><td> {{ rack[16][3] }}</td><td>{{ rack[16][4] }}</td><td><div id="log17"></div></td><td> {{ rack[16][5] }} </td></tr> -->
                         <!-- <tr><td><a href="/edit/{{ rack[15][0] }}"><span style="font-weight:bold">{{ rack[15][1] }}</span></a></td><td> {{ rack[15][3] }}</td><td>{{ rack[15][4] }}</td><td>M</td><td> {{ rack[15][5] }} </td></tr> -->
@@ -54,9 +49,6 @@
                         <!-- <tr><td><a href="/edit/{{ rack[2][0] }}"><span style="font-weight:bold">{{ rack[2][1] }}</span></a></td><td> {{ rack[2][3] }}</td><td>{{ rack[2][4] }}</td><td><div id="log3"></div></td><td> {{ rack[2][5] }} </td></tr> -->
                         <!-- <tr><td><a href="/edit/{{ rack[1][0] }}"><span style="font-weight:bold">{{ rack[1][1] }}</span></a></td><td> {{ rack[1][3] }}</td><td>{{ rack[1][4] }}</td><td><div id="log2"></div></td><td> {{ rack[1][5] }} </td></tr> -->
                         <!-- <tr><td><a href="/edit/{{ rack[0][0] }}"><span style="font-weight:bold">{{ rack[0][1] }}</span></a></td><td> {{ rack[0][3] }}</td><td>{{ rack[0][4] }}</td><td><div id="log1"></div></td><td> {{ rack[0][5] }} </td></tr> -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
+        </table>
     </body>
 {% endblock %}
