@@ -1,33 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <br>
-    <br>
-    <br>
-    <br>
     <h1 align='center'>Edit Rack</h1>
-    <br>
     <form method="POST" id="target">
         <div class="form-group">
             <input type="hidden" type="text" class="form-control" name="id" value="{{ data.id }}" placeholder="ID" readonly>
         </div>
         <div class="form-group">
-            Rack <input type="text" class="form-control" name="rack" value="{{ data.rack }}" placeholder="Rack" readonly>
-        </div>
-        <!-- <div class="form-group"> -->
-        <!--     Sheets <input type="text" class="form-control" name="row" value="{{ data.row }}" placeholder="Row"> -->
-        <!-- </div> -->
-        <div class="form-group">
-            Material Type <input type="text" class="form-control" name="matl" value="{{ data.matl }}" placeholder="Material Type" readonly>
+            <p class="formTitle">Rack</p> <input type="text" class="form-control formRack" name="rack" value="{{ data.rack }}" placeholder="Rack" readonly>
         </div>
         <div class="form-group">
-            Sheet Size <input type="text" class="form-control" name="size" value="{{ data.size }}" placeholder="Sheet Size" readonly>
+            <p class="formTitle">Material Type</p> <input type="text" class="form-control formMtl" name="matl" value="{{ data.matl }}" placeholder="Material Type" readonly>
         </div>
         <div class="form-group">
-            Sheets <input type="text" class="form-control" name="row" value="{{ data.row }}" placeholder="Row">
+            <p class="formTitle">Sheet Size</p> <input type="text" class="form-control formSize" name="size" value="{{ data.size }}" placeholder="Sheet Size" readonly>
         </div>
         <div class="form-group">
-            Notes <input type="text" class="form-control" name="note" value="{{ data.note }}" placeholder="Notes">
+            <p class="formTitle">Sheets</p> <input type="text" class="form-control formSheet" name="row" value="{{ data.row }}" placeholder="Row">
+        </div>
+        <div class="form-group">
+            <p class="formTitle">Notes</p><input type="text" class="form-control formNote" name="note" value="{{ data.note }}" placeholder="Notes">
         </div>
         <div class="form-group">
             <input type="hidden" type="text" class="form-control" name="weight" value="{{ data.weight }}" placeholder="Weight">
@@ -36,10 +28,8 @@
             <input type="hidden" type="text" class="form-control" name="phidget" value="{{ data.phidget }}" placeholder="Phidget">
         </div>
         <div>
-            <a href="/advedit/{{ data.id }}">Advanced Settings</a>
+            <a href="/advedit/{{ data.id }}" class="formAdv">Advanced Settings</a>
         </div>
-        <br>
-
-        <button type="submit" class="btn btn-block btn-primary">Update</button>
+        <button type="submit" class="btn btn-block btn-primary formBtn">Update</button>
     </form>
 {% endblock %}
