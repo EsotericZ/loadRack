@@ -242,8 +242,17 @@ def rack09():
 def rack10():
     r = racks()
     rack = r.values.tolist()
-    rows = Job.query.all()
-    return render_template('rack10.html', rows=rows, rack=rack)
+    # rows = Job.query.all()
+    for r in rack:
+        indv = [];
+        if r[0] > 102:
+            if r[5] != '':
+                indSplit = r[5].split(";");
+                finalCut = "\n".join(indSplit)
+                r.append(finalCut)
+            else:
+                r.append('-')
+    return render_template('rack10.html', rack=rack)
 
 @app.route('/rack11')
 def rack11():
