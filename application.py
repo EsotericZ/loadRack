@@ -167,9 +167,9 @@ def index():
     mtl = []
     for r in rack:
         if r[3] != '':
-            mtl.append(r[3])
+            mtl.append([r[1], r[2], r[3], r[4], r[5]])
     # rows = Job.query.all()
-    # print(rack)
+    # print(mtl)
     #only by sending this page first will the client be connected to the socketio instance
     return render_template('index.html', rack=rack, mtl=mtl)
 

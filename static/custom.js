@@ -37,3 +37,10 @@ $(document).ready(function () {
                 $('#sidebar').toggleClass('active');
             });
         });
+
+// MATERIAL FINDER
+$(document).ready(function () {
+            $('.findBtn').on('click', function () {
+                $('#matl').append("<p>Test<p>");
+            });
+        });
