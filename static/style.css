@@ -337,6 +337,46 @@ a.disabledLink {
 }
 
 /* ---------------------------------------------------
+    FLOOR MAP
+----------------------------------------------------- */
+#floor {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: 1px solid red;
+    height: 600px;
+    /* font-height: 30px; */
+    /* text-align: center: */
+    /* font-weight: bold; */
+    color: pink;
+    font-size: 30px;
+    margin: auto;
+}
+
+#rack12 {
+    width: 150px;
+    height: 600px;
+    border: 2px solid black;
+}
+
+#col1 {
+    width: 150px;
+    border: 1px solid green;
+}
+
+#rack01 {
+    width: 150px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+#rack02 {
+    width: 150px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+/* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
 
@@ -351,3 +391,6 @@ a.disabledLink {
         display: none;
     }
 }
+
+
+
