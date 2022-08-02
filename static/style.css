@@ -344,10 +344,11 @@ a.disabledLink {
     width: 100%;
     justify-content: center;
     border: 1px solid red;
-    height: 600px;
+    height: 400px;
     color: pink;
     font-size: 30px;
     margin: auto;
+    margin-top: 50px;
 }
 
 #rack12 {
@@ -357,9 +358,9 @@ a.disabledLink {
 }
 
 #col1 {
+    margin-right: 50px;
     width: 100px;
     height: 400px;
-    border: 1px solid green;
 }
 
 #rack01 {
@@ -375,24 +376,26 @@ a.disabledLink {
 }
 
 #rack03 {
+    margin-top: 100px;
     width: 100px;
     height: 200px;
     border: 2px solid black;
 }
 
 #col2 {
+    margin-top: 100px;
+    margin-right: 50px;
     width: 400px;
     height: 200px;
-    border: 1px solid green;
 }
 
 #col3 {
+    margin-top: 100px;
     width: 400px;
     height: 200px;
-    border: 1px solid green;
 }
 
-.rack11 {
+#rack11, #rack10 {
     width: 400px;
     height: 100px;
     border: 2px solid black;
@@ -402,22 +405,23 @@ a.disabledLink {
     display: flex;
 }
 
-.rack04 {
+#rack04, #rack05, #rack06, #rack07 {
     width: 200px;
     height: 100px;
     border: 2px solid black;
 }
 
-.rack05 {
-    width: 200px;
-    height: 100px;
-    border: 2px solid black;
-}
+/* .rack05 { */
+/*     width: 200px; */
+/*     height: 100px; */
+/*     border: 2px solid black; */
+/* } */
 
 #col4 {
-    width: 100px;
+    margin-top: 100px;
+    width: 200px;
     height: 200px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 
 #rack08 {

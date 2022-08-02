@@ -30,17 +30,17 @@
             </div>
             <div id="rack03">03</div>
             <div id="col2">
-                <div class="rack11">11</div>
+                <div id="rack11">11</div>
                 <div class="inline">
-                    <div class="rack04">04</div>
-                    <div class="rack05">05</div>
+                    <div id="rack04">04</div>
+                    <div id="rack05">05</div>
                 </div>
             </div>
             <div id="col3">
-                <div class="rack11">10</div>
+                <div id="rack11">10</div>
                 <div class="inline">
-                    <div class="rack04">06</div>
-                    <div class="rack05">07</div>
+                    <div id="rack04">06</div>
+                    <div id="rack05">07</div>
                 </div>
             </div>
             <div id="col4">
@@ -98,6 +98,13 @@
                 $("#noteFind").html('');
             }
         });
+    
+    // TOGGLE NAVBAR
+    $(document).ready(function () {
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').toggleClass('active');
+        });
+    });
     </script>
 
     </body>
