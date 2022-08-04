@@ -168,9 +168,8 @@ def index():
     for r in rack:
         if r[3] != '':
             mtl.append([r[1], r[2], r[3], r[4], r[5]])
-    # rows = Job.query.all()
-    # print(mtl)
-    #only by sending this page first will the client be connected to the socketio instance
+    sorter = lambda x: (x[2], x[0], x[1], x[3], x[4])
+    mtl = sorted(mtl, key=sorter)
     return render_template('index.html', rack=rack, mtl=mtl)
 
 @app.route('/rack01')

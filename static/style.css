@@ -337,6 +337,35 @@ a.disabledLink {
 }
 
 /* ---------------------------------------------------
+    SEARCH / RESULTS
+----------------------------------------------------- */
+#qFind {
+    margin-right: 25px;
+}
+
+#searchFxn {
+    display: flex;
+    justify-content: center;
+}
+
+#searchBox {
+    width: 60%;
+}
+
+.findBtn {
+    background-color: #B82626;
+    margin-left: 25px;
+    width: 100px;
+}
+
+#results {
+    margin: 25px auto;
+    /* margin-left: 300px; */
+    width: 500px;
+    height: 100px;
+}
+
+/* ---------------------------------------------------
     FLOOR MAP
 ----------------------------------------------------- */
 #floor {

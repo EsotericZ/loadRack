@@ -5,68 +5,98 @@
         <div>
             <h1 align="center">Material Racks</h1>
             <br>
-            <h3>Quick Find</h3>
-            <div class="form-group">
-                <select class="form-control" name ="material" id="material">
-                    <option value="Material">Select Material</option>
-                    {% for m in mtl %}
-                    <option value="{{ m }}">{{ m[2] }}</option>
-                    {% endfor %}
-                </select>
+            <div id="searchFxn">
+                <!-- <h3 id="qFind">Quick Find</h3> -->
+                <div class="form-group" id="searchBox">
+                    <select class="form-control" name ="material" id="material">
+                        <option value="Material">Select Material</option>
+                        {% for m in mtl %}
+                            <option value="{{ m }}">{{ m[2] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!-- <button type="submit" class="btn btn-block btn-primary findBtn">Find</button> -->
             </div>
-            <button type="submit" class="btn btn-block btn-primary findBtn">Find</button>
         </div>
-        <div id="rackFind"></div>
-        <div id="rowFind"></div>
-        <div id="sizeFind"></div>
-        <div id="numFind"></div>
-        <div id="noteFind"></div>
+        <div id="results">
+            <div id="rackFind"></div>
+            <div id="rowFind"></div>
+            <div id="sizeFind"></div>
+            <div id="numFind"></div>
+            <div id="noteFind"></div>
+        </div>
 
         <div id="floor">
             <div id="rack12">
-                <div class=textVert>12</div>
+                <div class=textVert>
+                    12
+                </div>
             </div>
             <div id="col1">
                 <div id="rack02">
-                    <div class=textVert>02</div>
+                    <div class=textVert>
+                        <a href="{{ url_for('rack02') }}">02</a>
+                    </div>
                 </div>
                 <div id="rack01">
-                    <div class=textVert>01</div>
+                    <div class=textVert>
+                        <a href="{{ url_for('rack01') }}">01</a>
+                    </div>
                 </div>
             </div>
             <div id="rack03">
-                <div class=textVert>03</div>
+                <div class=textVert>
+                    <a href="{{ url_for('rack03') }}">03</a>
+                </div>
             </div>
             <div id="col2">
                 <div id="rack11">
-                    <div class=textVert>11</div>
+                    <div class=textVert>
+                        <a href="{{ url_for('rack11') }}">11</a>
+                    </div>
                 </div>
                 <div class="inline">
                     <div id="rack04">
-                        <div class=textVert>04</div>
+                        <div class=textVert>
+                            <a href="{{ url_for('rack04') }}">04</a>
+                        </div>
                     </div>
                     <div id="rack05">
-                        <div class=textVert>05</div>
+                        <div class=textVert>
+                            <a href="{{ url_for('rack05') }}">05</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="col3">
-                <div id="rack11"><div class=textVert>10</div></div>
-                <div class="inline">
-                    <div id="rack04">
-                        <div class=textVert>06</div>
+                <div id="rack11">
+                    <div class=textVert>
+                        <a href="{{ url_for('rack10') }}">10</a>
                     </div>
-                    <div id="rack05">
-                        <div class=textVert>07</div>
+                </div>
+                <div class="inline">
+                    <div id="rack06">
+                        <div class=textVert>
+                            <a href="{{ url_for('rack06') }}">06</a>
+                        </div>
+                    </div>
+                    <div id="rack07">
+                        <div class=textVert>
+                            <a href="{{ url_for('rack07') }}">07</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="col4">
                 <div id="rack09">
-                    <div class=textVert>09</div>
+                    <div class=textVert>
+                        <a href="{{ url_for('rack09') }}">09</a>
+                    </div>
                 </div>
                 <div id="rack08">
-                    <div class=textVert>08</div>
+                    <div class=textVert>
+                        <a href="{{ url_for('rack08') }}">08</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -85,7 +115,7 @@
         let r10 = document.getElementById('rack10');
         let r11 = document.getElementById('rack11');
         let r12 = document.getElementById('rack12');
-        $(".findBtn").on('click', function() {
+        $("#material").on('change', function() {
             $("#rackFind").html('');
             $("#rowFind").html('');
             $("#sizeFind").html('');
@@ -93,40 +123,50 @@
             $("#noteFind").html('');
             let selectedMatl = $("#material").val();
             let data = selectedMatl.split("'");
-            console.log(data)
             let rack;
             if (data[1] > 0 && data[1] <= 18) {
-                r1.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r1.setAttribute("style", "background-color: #D22B2B;");
                 rack = 1;
             } else if (data[1] >= 19 && data[1] <= 36) {
-                r2.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r2.setAttribute("style", "background-color: #D22B2B;");
                 rack = 2;
             } else if (data[1] >= 37 && data[1] <= 47) {
-                r3.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r3.setAttribute("style", "background-color: #D22B2B;");
                 rack = 3;
             } else if (data[1] >= 48 && data[1] <= 57) {
-                r4.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r4.setAttribute("style", "background-color: #D22B2B;");
                 rack = 4;
             } else if (data[1] >= 58 && data[1] <= 67) {
-                r5.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r5.setAttribute("style", "background-color: #D22B2B;");
                 rack = 5;
             } else if (data[1] >= 68 && data[1] <= 77) {
-                r6.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r6.setAttribute("style", "background-color: #D22B2B;");
                 rack = 6;
             } else if (data[1] >= 78 && data[1] <= 86) {
-                r7.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r7.setAttribute("style", "background-color: #D22B2B;");
                 rack = 7;
             } else if (data[1] >= 87 && data[1] <= 94) {
-                r8.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r8.setAttribute("style", "background-color: #D22B2B;");
                 rack = 8;
             } else if (data[1] >= 95 && data[1] <= 102) {
-                r9.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r9.setAttribute("style", "background-color: #D22B2B;");
                 rack = 9;
             } else if (data[1] >= 103 && data[1] <= 110) {
-                r10.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r10.setAttribute("style", "background-color: #D22B2B;");
                 rack = 10;
             } else if (data[1] >= 111 && data[1] <= 118) {
-                r11.setAttribute("style", "background-color: red;");
+                resetFormat()
+                r11.setAttribute("style", "background-color: #D22B2B;");
                 rack = 11;
             } 
             $("#rackFind").append("Rack: "+rack);
@@ -150,6 +190,20 @@
             $('#sidebar').toggleClass('active');
         });
     });
+
+    function resetFormat() {
+        r1.setAttribute("style", "background-color: #FFFFFF;");
+        r2.setAttribute("style", "background-color: #FFFFFF;");
+        r3.setAttribute("style", "background-color: #FFFFFF;");
+        r4.setAttribute("style", "background-color: #FFFFFF;");
+        r5.setAttribute("style", "background-color: #FFFFFF;");
+        r6.setAttribute("style", "background-color: #FFFFFF;");
+        r7.setAttribute("style", "background-color: #FFFFFF;");
+        r8.setAttribute("style", "background-color: #FFFFFF;");
+        r9.setAttribute("style", "background-color: #FFFFFF;");
+        <!-- r10.setAttribute("style", "background-color: #FFFFFF;"); -->
+        <!-- r11.setAttribute("style", "background-color: #FFFFFF;"); -->
+    }
     </script>
 
     </body>
