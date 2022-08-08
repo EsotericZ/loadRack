@@ -33,71 +33,93 @@
                 </div>
             </div>
             <div id="col1">
-                <div id="rack02">
+                <a href="{{ url_for('rack02') }}">
+                    <div id="rack02">
+                        <div class=textVert>
+                            02
+                        </div>
+                    </div>
+                </a>
+                <a href="{{ url_for('rack01') }}">
+                    <div id="rack01">
+                        <div class=textVert>
+                            01
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <a href="{{ url_for('rack03') }}">
+                <div id="rack03">
                     <div class=textVert>
-                        <a href="{{ url_for('rack02') }}">02</a>
+                        03
                     </div>
                 </div>
-                <div id="rack01">
-                    <div class=textVert>
-                        <a href="{{ url_for('rack01') }}">01</a>
-                    </div>
-                </div>
-            </div>
-            <div id="rack03">
-                <div class=textVert>
-                    <a href="{{ url_for('rack03') }}">03</a>
-                </div>
-            </div>
+            </a>
             <div id="col2">
-                <div id="rack11">
-                    <div class=textVert>
-                        <a href="{{ url_for('rack11') }}">11</a>
+                <a href="{{ url_for('rack11') }}">
+                    <div id="rack11">
+                        <div class=textVert>
+                            11
+                        </div>
                     </div>
-                </div>
+                </a>
                 <div class="inline">
-                    <div id="rack04">
-                        <div class=textVert>
-                            <a href="{{ url_for('rack04') }}">04</a>
+                    <a href="{{ url_for('rack04') }}">
+                        <div id="rack04">
+                            <div class=textVert>
+                                04
+                            </div>
                         </div>
-                    </div>
-                    <div id="rack05">
-                        <div class=textVert>
-                            <a href="{{ url_for('rack05') }}">05</a>
+                    </a>
+                    <a href="{{ url_for('rack05') }}">
+                        <div id="rack05">
+                            <div class=textVert>
+                                05
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div id="col3">
-                <div id="rack11">
-                    <div class=textVert>
-                        <a href="{{ url_for('rack10') }}">10</a>
+                <a href="{{ url_for('rack10') }}">
+                    <div id="rack10">
+                        <div class=textVert>
+                            10
+                        </div>
                     </div>
-                </div>
+                </a>
                 <div class="inline">
-                    <div id="rack06">
-                        <div class=textVert>
-                            <a href="{{ url_for('rack06') }}">06</a>
+                    <a href="{{ url_for('rack06') }}">
+                        <div id="rack06">
+                            <div class=textVert>
+                                06
+                            </div>
                         </div>
-                    </div>
-                    <div id="rack07">
-                        <div class=textVert>
-                            <a href="{{ url_for('rack07') }}">07</a>
+                    </a>
+                    <a href="{{ url_for('rack07') }}">
+                        <div id="rack07">
+                            <div class=textVert>
+                                07
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div id="col4">
-                <div id="rack09">
-                    <div class=textVert>
-                        <a href="{{ url_for('rack09') }}">09</a>
+                <a href="{{ url_for('rack09') }}">
+                    <div id="rack09">
+                        <div class=textVert>
+                            09
+                        </div>
                     </div>
-                </div>
-                <div id="rack08">
-                    <div class=textVert>
-                        <a href="{{ url_for('rack08') }}">08</a>
+                </a>
+                <a href="{{ url_for('rack08') }}">
+                    <div id="rack08">
+                        <div class=textVert>
+                            08
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     
@@ -122,7 +144,10 @@
             $("#numFind").html('');
             $("#noteFind").html('');
             let selectedMatl = $("#material").val();
+            console.log(selectedMatl)
+            console.log(selectedMatl[0])
             let data = selectedMatl.split("'");
+            console.log(data)
             let rack;
             if (data[1] > 0 && data[1] <= 18) {
                 resetFormat()
