@@ -487,6 +487,18 @@ a.disabledLink {
     MEDIAQUERIES
 ----------------------------------------------------- */
 
+.exportBtn {
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+    background-color: #B82626;
+    border: solid 1px black;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
 @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;
@@ -498,6 +510,3 @@ a.disabledLink {
         display: none;
     }
 }
-
-
-
